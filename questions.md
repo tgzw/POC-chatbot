@@ -81,10 +81,10 @@ Con esto en mente, hay una diversidad de parámetros que podemos tener en cuenta
 Existe una diversidad de métricas que se han desarrollado para tratar de obtener métricas del desempeño de un sistema RAG. Uno de los frameworks que podrían usarse con este objetivo es Ragas. Algunas de estas métricas son:
 
 #### Answer Correctness
-Rango: 0-1
-Tiene en cuenta: input, output, ground truth
-Calcula el accuracy del output comparado con el ground truth
-Esta métrica combina 2 aspectos, la similaridad semántica y la similaridad factual.
+Rango: 0-1  
+Tiene en cuenta: input, output, ground truth  
+Calcula el accuracy del output comparado con el ground truth  
+Esta métrica combina 2 aspectos, la similaridad semántica y la similaridad factual.  
 
 La corrección factual se determina calculando el f1-score de:
 - Verdaderos positivos: hechos que están presentes en el output y en el ground truth
@@ -92,33 +92,33 @@ La corrección factual se determina calculando el f1-score de:
 - Falsos negativos: hechos que están presentes en el ground truth pero no en el output
 
 #### Answer Semantic Similarity
-Rango: 0-1
-Tiene en cuenta: input, output, ground truth
-Aspira a calcular el parecido semántico del output comparado con el ground truth
-Para ello, vectoriza el ground truth y el output y calcula la distancia coseno entre los dos vectores.
+Rango: 0-1  
+Tiene en cuenta: input, output, ground truth  
+Aspira a calcular el parecido semántico del output comparado con el ground truth  
+Para ello, vectoriza el ground truth y el output y calcula la distancia coseno entre los dos vectores.  
 
 #### Answer Relevancy
-Tiene en cuenta: input, output, retrieved context
-Determina la relevancia del output respecto al input
-Para ello, mide la distancia coseno del input original con un número de inputs artificiales generados a partir de la respuesta.
+Tiene en cuenta: input, output, retrieved context  
+Determina la relevancia del output respecto al input  
+Para ello, mide la distancia coseno del input original con un número de inputs artificiales generados a partir de la respuesta.  
 
 #### Faithfulness
-Tiene en cuenta: input, output, retrieved context
-Comprueba que el output esté alineado con el retrieved context y no haya inventado cosas
+Tiene en cuenta: input, output, retrieved context  
+Comprueba que el output esté alineado con el retrieved context y no haya inventado cosas  
 
 #### Contextual Precision
-Tiene en cuenta: input, output, retrieved context
-Comprueba si se ha recuperado contexto no relevante
+Tiene en cuenta: input, output, retrieved context  
+Comprueba si se ha recuperado contexto no relevante  
 
 #### Contextual Relevancy
-Tiene en cuenta: input, output, retrieved context
-Comprueba si el contexto recuperado es relevante y penaliza la información redundante
+Tiene en cuenta: input, output, retrieved context  
+Comprueba si el contexto recuperado es relevante y penaliza la información redundante  
 
 #### Context Recall
-Rango: 0-1
-Tiene en cuenta: retrieved context, ground truth
-Analiza cada frase del ground truth para determinar si puede ser atribuida al retrieved context o no.
-Para ello, se descompone el ground truth en frases individuales, y mediante un LLM se determina si cada una puede ser atribuida al retrieved context.
+Rango: 0-1  
+Tiene en cuenta: retrieved context, ground truth  
+Analiza cada frase del ground truth para determinar si puede ser atribuida al retrieved context o no.  
+Para ello, se descompone el ground truth en frases individuales, y mediante un LLM se determina si cada una puede ser atribuida al retrieved context.  
 
 
 ### Q&A bot

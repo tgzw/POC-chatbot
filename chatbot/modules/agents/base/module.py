@@ -21,4 +21,9 @@ agent = base_agent.from_llm_and_tools(
     suffix=SUFFIX,
 )
 
-agent_executor = AgentExecutor(agent=agent, memory=memory, tools=tools, verbose=True)
+agent_executor = AgentExecutor(
+    agent=agent, 
+    memory=memory, 
+    tools=tools, 
+    verbose=True,
+    handle_parsing_errors=True)

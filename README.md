@@ -1,7 +1,7 @@
 
 
 ## Deployment
-- Put an openai api key in .env
+- Rename .env_sample to .env and put a OpenAI key
 - Change the rest of variables in .env at your will
 
 Use python 3.11.0

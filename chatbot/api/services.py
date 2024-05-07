@@ -23,6 +23,7 @@ def upload_pdf(pdf_paths):
                 print(f"Unable to load {file}")
 
     # split it into chunks
+
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     splits = text_splitter.split_documents(docs[0])
 
